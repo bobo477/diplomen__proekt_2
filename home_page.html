@@ -22,6 +22,12 @@
           <li><a href="recipes.html" class="header-text recipes">Recipes</a></li>
           <li><a href="#popular" class="header-text popular">Popular</a></li>
           <li><a href="#log in" class="header-text log in">Log in</a></li>
+          <li>
+            <!-- Search Icon -->
+            <a href="#" class="header-text search-icon" onclick="toggleSearch()">
+              <img src="icons/magnifying-glass.png" alt="Search" style="width: 20px; height: 20px;">
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -48,10 +54,31 @@
         </div>
       </div>
 
+      <!-- Search Bar (Initially Hidden) -->
+      <div class="search-bar" id="searchBar">
+        <input type="text" id="searchInput" placeholder="Search recipes...">
+        <img src="icons/magnifying-glass.png" alt="Search" class="search-icon" onclick="searchRecipes()">
+      </div>
+
       <!-- Footer Section -->
       <footer class="footer">
         <span class="footer-text">All rights reserved ®</span>
       </footer>
     </div>
+
+    <script>
+      // Toggle the visibility of the search bar
+      function toggleSearch() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.classList.toggle('show-search');
+      }
+
+      // Search functionality
+      function searchRecipes() {
+        const searchTerm = document.getElementById('searchInput').value;
+        console.log('Searching for:', searchTerm);
+        // Add your search logic here
+      }
+    </script>
   </body>
 </html>

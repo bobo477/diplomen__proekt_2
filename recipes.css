@@ -9,14 +9,15 @@
 
 .search-bar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start; /* Align to the right */
     align-items: center;
-    width: 30%; /* Adjust as needed to control the size of the search bar */
+    width: auto; /* Adjust width to fit content */
+    margin-left: 100px; /* Increase margin to the left */
 }
 
 .search-bar input {
     width: 100%; /* Full width inside search bar */
-    padding: 10px;
+    padding : 10px; 
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -26,6 +27,10 @@
 
 .search-bar input:focus {
     border-color: var(--primary-color);
+}
+
+.search-icon {
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

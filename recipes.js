@@ -13,3 +13,13 @@ function searchRecipes() {
         }
     });
 }
+
+// Function to toggle the search input visibility
+function toggleSearch() {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput.style.display === 'none' || !searchInput.style.display) {
+        searchInput.style.display = 'block';
+    } else {
+        searchInput.style.display = 'none';
+    }
+}
