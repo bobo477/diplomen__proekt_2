@@ -36,7 +36,10 @@ body {
   align-items: center;
   background-color: #ffffff;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-shadow: none; /* No outer box shadow */
+  border-radius: 0px; /* Remove rounded corners from navbar */
+  overflow: hidden; /* Ensure nothing overflows */
 }
 
 .logo {
@@ -48,7 +51,8 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 15px; /* Reduce the space between nav links */
+  transition: transform 0.5s ease;
 }
 
 .nav-links a {
@@ -61,6 +65,72 @@ body {
 
 .nav-links a:hover {
   color: var(--primary-color);
+}
+
+/* Search Bar inside Header */
+.search-bar {
+  display: none;  /* Hidden initially */
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Add some space between the wall and the search bar */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;  /* Rounded corners for the search bar */
+  align-items: center;
+  width: 250px;
+  transition: all 0.3s ease;
+  box-shadow: none; /* Remove outer box shadow */
+}
+
+.search-bar.show-search {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 50px;  /* Make the input field inside the search bar rounded */
+  border: 1px solid #ddd;
+  outline: none;
+  width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: none; /* Remove input field's box shadow */
+}
+
+.search-bar input:focus {
+  border-color: var(--primary-color);
+  box-shadow: none; /* Remove the focus shadow */
+}
+
+.search-icon {
+  cursor: pointer;
+  width: 24px;  /* Set fixed width for icon */
+  height: 24px;  /* Set fixed height for icon */
+  margin-left: 10px;
+  position: relative;
+  top: 5px; /* Move the icon 5px from the top */
+  transition: transform 0.2s ease; /* Smooth transition for when the icon moves */
+}
+
+/* Hide the search icon when the search bar is visible */
+.search-icon.hidden {
+  display: none;
+}
+
+/* Shift nav links to the left */
+.nav-links.shift-left {
+  transform: translateX(-100%);
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 0px;
+  font-size: 14px;
+  margin-top: auto;
 }
 
 /* Gallery Section */
@@ -116,82 +186,44 @@ body {
   background-image: url('photos/winter-salad.jpg');
 }
 
-/* Footer Section */
-.footer {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  text-align: center;
-  padding: 0px;
-  font-size: 14px;
-  margin-top: auto;
-}
-
-/* Search Bar (Initially hidden) */
-.search-bar {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.search-bar.show-search {
-  display: flex;
-}
-
-.search-bar input {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  outline: none;
-  width: 250px;
-}
-
-.search-icon {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-}
-
+/* Responsive Design */
 @media (max-width: 600px) {
   .header-container {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-links {
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
   }
 
   .gallery-item {
-      width: 90%;
+    width: 90%;
   }
 
   .gallery-image {
-      height: 300px;
+    height: 300px;
   }
 }
 
 @media (max-width: 900px) {
   .gallery-container {
-      gap: 15px;
+    gap: 15px;
   }
 
   .gallery-item {
-      width: 45%;
+    width: 45%;
   }
 
   .gallery-image {
-      height: 320px;
+    height: 320px;
   }
 }
 
 @media (min-width: 1200px) {
   .gallery-item {
-      width: 22%;
+    width: 22%;
   }
 }

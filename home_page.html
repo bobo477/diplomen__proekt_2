@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Jost:ital,wght@1,500&display=swap"
     />
     <link rel="stylesheet" href="home_page.css" />
+    <script src="script.js" defer></script> <!-- External JavaScript file -->
     <title>Seasonal Gallery</title>
   </head>
   <body>
@@ -17,7 +18,7 @@
         <div class="logo">
           <span class="logo-text">Logo</span>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="home_page.html" class="header-text home">Home</a></li>
           <li><a href="recipes.html" class="header-text recipes">Recipes</a></li>
           <li><a href="#popular" class="header-text popular">Popular</a></li>
@@ -29,6 +30,10 @@
             </a>
           </li>
         </ul>
+        <div class="search-bar" id="searchBar">
+          <input type="text" id="searchInput" placeholder="Search recipes...">
+          <img src="icons/magnifying-glass.png" alt="Search" class="search-icon" onclick="searchRecipes()">
+        </div>
       </nav>
 
       <!-- Main Content -->
@@ -54,31 +59,10 @@
         </div>
       </div>
 
-      <!-- Search Bar (Initially Hidden) -->
-      <div class="search-bar" id="searchBar">
-        <input type="text" id="searchInput" placeholder="Search recipes...">
-        <img src="icons/magnifying-glass.png" alt="Search" class="search-icon" onclick="searchRecipes()">
-      </div>
-
       <!-- Footer Section -->
       <footer class="footer">
         <span class="footer-text">All rights reserved ®</span>
       </footer>
     </div>
-
-    <script>
-      // Toggle the visibility of the search bar
-      function toggleSearch() {
-        const searchBar = document.getElementById('searchBar');
-        searchBar.classList.toggle('show-search');
-      }
-
-      // Search functionality
-      function searchRecipes() {
-        const searchTerm = document.getElementById('searchInput').value;
-        console.log('Searching for:', searchTerm);
-        // Add your search logic here
-      }
-    </script>
   </body>
 </html>
