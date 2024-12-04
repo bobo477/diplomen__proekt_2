@@ -37,8 +37,8 @@ body {
   background-color: #ffffff;
   padding: 10px 20px;
   position: relative;
-  box-shadow: none; /* No outer box shadow */
-  border-radius: 0px; /* Remove rounded corners from navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  border-radius: 8px; /* Add slight rounding to corners */
   overflow: hidden; /* Ensure nothing overflows */
 }
 
@@ -51,8 +51,8 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 15px; /* Reduce the space between nav links */
-  transition: transform 0.5s ease;
+  gap: 10px; /* Reduce the space between nav links */
+  transition: transform 0.3s ease;
 }
 
 .nav-links a {
@@ -61,30 +61,36 @@ body {
   font-weight: 500;
   color: var(--text-color);
   transition: color var(--transition-time);
+  padding: 8px 12px; /* Add padding for cleaner look */
+  border-radius: 4px; /* Slight rounding for links */
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.05); /* Add subtle background on hover */
 }
 
 /* Search Bar inside Header */
 .search-bar {
-  display: none;  /* Hidden initially */
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
-  right: 20px; /* Add some space between the wall and the search bar */
-  transform: translateY(-50%); /* Center vertically */
+  right: -300px; /* Start off-screen */
+  transform: translateY(-50%);
   background-color: #fff;
   padding: 10px 20px;
-  border-radius: 50px;  /* Rounded corners for the search bar */
-  align-items: center;
+  border-radius: 50px;
   width: 250px;
-  transition: all 0.3s ease;
-  box-shadow: none; /* Remove outer box shadow */
+  transition: right 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure the search bar appears above other elements */
 }
 
 .search-bar.show-search {
-  display: flex;
+  right: 20px; /* Slide into view */
+  opacity: 1;
 }
 
 .search-bar input {
@@ -94,13 +100,11 @@ body {
   border: 1px solid #ddd;
   outline: none;
   width: 220px;
-  transition: all 0.3s ease;
-  box-shadow: none; /* Remove input field's box shadow */
+  transition: border-color 0.3s ease;
 }
 
 .search-bar input:focus {
   border-color: var(--primary-color);
-  box-shadow: none; /* Remove the focus shadow */
 }
 
 .search-icon {
@@ -120,7 +124,12 @@ body {
 
 /* Shift nav links to the left */
 .nav-links.shift-left {
-  transform: translateX(-100%);
+  transform: translateX(-300px); /* Shift nav links to the left */
+}
+
+/* Shift nav links to the right */
+.nav-links.shift-right {
+  transform: translateX(300px); /* Shift nav links to the right */
 }
 
 /* Footer Section */

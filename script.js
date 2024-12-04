@@ -1,22 +1,29 @@
-// Toggle the visibility of the search bar and shift the nav links
-function toggleSearch() {
-  const navLinks = document.getElementById('navLinks');
-  const searchBar = document.getElementById('searchBar');
-  const searchIcon = document.querySelector('.search-icon');
+// Function to filter recipes based on the search input
+function searchRecipes() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const recipes = document.querySelectorAll('.recipe-box');
   
-  // Move the navigation links offscreen
-  navLinks.classList.toggle('shift-left');
-  
-  // Show the search bar
-  searchBar.classList.toggle('show-search');
-  
-  // Hide the search icon when the search bar appears
-  searchIcon.classList.toggle('hidden');
+  recipes.forEach(function(recipe) {
+      const recipeName = recipe.querySelector('h2').textContent.toLowerCase();
+      
+      if (recipeName.includes(input)) {
+          recipe.style.display = ''; // Show the recipe if it matches
+      } else {
+          recipe.style.display = 'none'; // Hide the recipe if it doesn't match
+      }
+  });
 }
 
-// Handle the search functionality
-function searchRecipes() {
-  const searchTerm = document.getElementById('searchInput').value;
-  console.log('Searching for:', searchTerm);
-  // Add your search logic here
+// Function to toggle search bar visibility
+function toggleSearch() {
+  const searchBar = document.getElementById('searchBar');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle search bar visibility
+  searchBar.classList.toggle('show-search');
+  
+  // Slide the nav links when search bar is shown
+  navLinks.classList.toggle('shift-left');
+  searchIcon.classList.toggle('hidden'); // Toggle the hidden class
+
 }
