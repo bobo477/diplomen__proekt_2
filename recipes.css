@@ -15,12 +15,10 @@
     right: -300px; /* Start off-screen */
     transform: translateY(-50%);
     background-color: #fff;
-    padding: 10px 20px;
     border-radius: 50px;
     width: 250px;
     transition: right 0.3s ease, opacity 0.3s ease;
     opacity: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1; /* Ensure the search bar appears above other elements */
 }
 
@@ -41,12 +39,12 @@
 .search-bar input {
     padding: 8px;
     font-size: 16px;
-    border-radius: 50px;
+    border-radius: 50px;  /* Make the input field inside the search bar rounded */
     border: 1px solid #ddd;
     outline: none;
     width: 220px;
     transition: border-color 0.3s ease;
-}
+  }
 
 .search-bar input:focus {
     border-color: var(--primary-color);
@@ -54,11 +52,13 @@
 
 .search-icon {
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 24px;  /* Set fixed width for icon */
+    height: 24px;  /* Set fixed height for icon */
     margin-left: 10px;
-    transition: transform 0.2s ease;
-}
+    position: relative;
+    top: 2px; /* Move the icon 5px from the top */
+    transition: transform 0.2s ease; /* Smooth transition for when the icon moves */
+  }
 
 .search-icon.adjustable {
 margin-top: -9px;}
@@ -70,8 +70,8 @@ margin-top: -9px;}
 
 /* Shift nav links to the left */
 .nav-links.shift-left {
-    transform: translateX(-300px); /* Shift nav links to the left */
-}
+    transform: translateX(-250px); /* Shift nav links to the left */
+  }
 
 .nav-links {
     display: flex;
