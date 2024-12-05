@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепти</title>
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header Section -->
+        <nav class="header-container">
+            <div class="logo">
+                <span class="logo-text">Logo</span>
+            </div>
+            <ul class="nav-links gap-adjust padding-right" id="navLinks">
+                <li class="nav-item"><a href="home_page.html" class="header-text home">Home</a></li>
+                <li class="nav-item"><a href="recipes.html" class="header-text recipes">Recipes</a></li>
+                <li class="nav-item"><a href="popular.html" class="header-text popular">Popular</a></li>
+                <li class="nav-item"><a href="log_in.html" class="header-text log in">Log in</a></li>
+                <li class="nav-item">
+                    <!-- Search Icon -->
+                    <a href="#" class="header-text search-icon adjustable" id="searchIcon" onclick="toggleSearch()">
+                        <img src="icons/magnifying-glass.png" alt="Search" style="width: 20px; height: 20px;">
+                    </a>
+                </li>
+            </ul>
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+                <img src="icons/magnifying-glass.png" alt="Search" class="search-icon adjustable" onclick="searchRecipes()">
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container">
+            <h1>Популярни</h1>
+            <div class="recipes">
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Цезар">
+                    <h2>Салата Цезар</h2>
+                    <p>Време за приготвяне: 20 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos//483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Гръцка">
+                    <h2>Гръцка салата</h2>
+                    <p>Време за приготвяне: 15 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Капрезе">
+                    <h2>Салата Капрезе</h2>
+                    <p>Време за приготвяне: 10 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+                <div class="recipe-box">
+                    <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Салата Нисоаз">
+                    <h2>Салата Нисоаз</h2>
+                    <p>Време за приготвяне: 25 мин</p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            All rights reserved ®
+        </footer>
+    </div>
+
+    <script src="recipes.js"></script>
+</body>
+</html>

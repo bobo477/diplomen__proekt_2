@@ -18,6 +18,7 @@ function searchRecipes() {
 function toggleSearch() {
   const searchBar = document.getElementById('searchBar');
   const navLinks = document.getElementById('navLinks');
+  const searchIcon = document.getElementById('searchIcon');
 
   // Toggle search bar visibility
   searchBar.classList.toggle('show-search');
@@ -26,4 +27,6 @@ function toggleSearch() {
   navLinks.classList.toggle('shift-left');
   searchIcon.classList.toggle('hidden'); // Toggle the hidden class
 
+  // Toggle the position class
+  searchBar.classList.toggle('align-right');
 }

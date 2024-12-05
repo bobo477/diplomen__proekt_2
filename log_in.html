@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Jost:ital,wght@1,500&display=swap"
+    />
+    <link rel="stylesheet" href="log_in.css" />
+    <script src="script.js" defer></script>
+    <title>Log In</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header Section -->
+      <nav class="header-container">
+        <div class="logo">
+          <span class="logo-text">Logo</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="home_page.html" class="header-text home">Home</a></li>
+          <li><a href="recipes.html" class="header-text recipes">Recipes</a></li>
+          <li><a href="popular.html" class="header-text popular">Popular</a></li>
+          <li><a href="log_in.html" class="header-text log in">Log in</a></li>
+          <li>
+            <a href="#" class="header-text search-icon" id="searchIcon" onclick="toggleSearch()">
+              <img src="icons/magnifying-glass.png" alt="Search" style="width: 20px; height: 20px;">
+            </a>
+          </li>
+        </ul>
+        <div class="search-bar" id="searchBar">
+          <input type="text" id="searchInput" placeholder="Search recipes...">
+          <img src="icons/magnifying-glass.png" alt="Search" class="search-icon" onclick="searchRecipes()">
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-container">
+        <div class="login-container">
+          <h2>Log In</h2>
+          <form action="recipe_page.html" method="post">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Log In</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <span class="footer-text">All rights reserved ®</span>
+      </footer>
+    </div>
+  </body>
+</html>
