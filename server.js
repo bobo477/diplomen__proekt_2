@@ -1,8 +1,9 @@
 const express = require('express');
 const mysql = require('mysql2'); // Ensure you're using mysql2
 
+
 const app = express();
-const port = 3000;
+const port = 5500;
 
 // Serve static files
 app.use(express.static(__dirname)); // This line serves static files from the current directory
@@ -10,9 +11,9 @@ app.use(express.static(__dirname)); // This line serves static files from the cu
 // Database connection
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
+  user: 'root_23', // smeni !!!
   password: 'Petra_239', // Update with your MySQL password
-  database: 'recipe_db' // Update with your database name
+  database: '12g_db' // Update with your database name
 });
 
 db.connect(err => {
