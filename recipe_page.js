@@ -22,15 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const recipeContainer = document.getElementById('recipeContainer');
     recipeContainer.innerHTML = `
       <div class="recipe">
-        <h2>${recipe.name}</h2>
-        <p>Time: ${recipe.time}</p>
-        <h3>Ingredients:</h3>
-        <ul>
-          ${recipe.ingredients.map(ingredient => `<li>${ingredient.name} - ${ingredient.measurement}</li>`).join('')}
-        </ul>
-        <h3>Instructions:</h3>
-        <p>${recipe.instructions}</p>
+        <div class="recipe-image">
+          <img src="${recipe.image}" alt="${recipe.name}">
+          <p>Time to cook: ${recipe.timeToCook}</p>
+          <p>Prep time: ${recipe.prepTime}</p>
+          <p>Overall time: ${recipe.overallTime}</p>
+        </div>
+        <div class="recipe-details">
+          <h2>${recipe.name}</h2>
+          <h3>Ingredients:</h3>
+          <ul>
+            ${recipe.ingredients.map(ingredient => `<li>${ingredient.name} - ${ingredient.measurement}</li>`).join('')}
+          </ul>
+          <h3>Instructions:</h3>
+          <p>${recipe.instructions}</p>
+        </div>
       </div>
     `;
   }
-  

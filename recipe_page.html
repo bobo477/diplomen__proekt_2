@@ -12,19 +12,59 @@
         <!-- Header Section -->
         <nav class="header-container">
             <div class="logo">
-                <span class="logo-text">Logo</span>
+              <span class="logo-text">Logo</span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="home_page.html" class="header-text home">Home</a></li>
-                <li><a href="recipes.html" class="header-text recipes">Recipes</a></li>
-                <li><a href="popular.html" class="header-text popular">Popular</a></li>
-                <li><a href="log_in.html" class="header-text log in">Log in</a></li>
+              <li><a href="home_page.html" class="header-text home">Home</a></li>
+              <li><a href="recipes.html" class="header-text recipes">Recipes</a></li>
+              <li><a href="popular.html" class="header-text popular">Popular</a></li>
+              <li><a href="log_in.html" class="header-text log in">Log in</a></li>
+              <li><a href="recipe_page.html?id=2" class="header-text log in">template</a></li>
+                <!-- Search Icon -->
+                <a href="#" class="header-text search-icon" id="searchIcon" onclick="toggleSearch()">
+                  <img src="icons/magnifying-glass.png" alt="Search" style="width: 20px; height: 20px;">
+                </a>
+              </li>
             </ul>
-        </nav>
+            <div class="search-bar" id="searchBar">
+              <input type="text" id="searchInput" placeholder="Search recipes...">
+              <img src="icons/magnifying-glass.png" alt="Search" class="search-icon" onclick="searchRecipes()">
+            </div>
+          </nav>
 
         <!-- Main Content -->
         <div class="main-container" id="recipeContainer">
             <!-- Recipe details will be dynamically inserted here -->
+        </div>
+        <div class="recipe-container">
+            <h1>Delicious Dish</h1>
+            <img src="photos/483f56e817516380c9a43c82e2a7ff92.jpg" alt="Delicious Dish" class="recipe-image">
+            <div class="recipe-info">
+                <div class="recipe-times">
+                    <p>Prep Time: 20 mins</p>
+                    <p>Cook Time: 30 mins</p>
+                    <p>Total Time: 50 mins</p>
+                </div>
+                <div class="recipe-ingredients">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>1 cup flour</li>
+                        <li>2 eggs</li>
+                        <li>1/2 cup milk</li>
+                        <li>... (add more ingredients)</li>
+                    </ul>
+                </div>
+                <div class="recipe-instructions">
+                    <h2>Instructions</h2>
+                    <ol>
+                        <li>Step 1: Prepare the ingredients.</li>
+                        <li>Step 2: Mix the flour and eggs.</li>
+                        <li>Step 3: Add milk and stir.</li>
+                        <li>... (add more steps)</li>
+                       
+                    </ol>
+                </div>
+            </div>
         </div>
 
         <!-- Footer Section -->
@@ -34,3 +74,9 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+   
